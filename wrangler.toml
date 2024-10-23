@@ -1,0 +1,31 @@
+name = "uelface"
+main = "src/index.ts"
+compatibility_date = "2024-10-01"
+compatibility_flags = [ "nodejs_compat" ]
+logpush = true
+account_id = "67c153b81dd355e59c952f9fa3e8c738"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DATABASE"
+database_name = "uelface-db"
+database_id = "1dd08228-507d-4403-b8e8-1871914dff27"
+
+
+# Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
+# Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
+[[kv_namespaces]]
+binding = "uelface"
+id = "6bd4a87c464145fdb5b577cad3526605"
+
+# Bind an R2 Bucket. Use R2 to store arbitrarily large blobs of data, such as files.
+# Docs: https://developers.cloudflare.com/r2/api/workers/workers-api-usage/
+[[r2_buckets]]
+binding = "R2BUCKET"
+bucket_name = "uelface-r2"
+
+# Bind another Worker service. Use this binding to call another Worker without network overhead.
+# Docs: https://developers.cloudflare.com/workers/platform/services
+# [[services]]
+# binding = "MY_SERVICE"
+# service = "/api/*"

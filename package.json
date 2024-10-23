@@ -1,0 +1,17 @@
+{
+  "name": "uelface",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+		"log": "wrangler tail uelface"
+  },
+  "devDependencies": {
+    "crypto": "^1.0.1",
+    "itty-router": "^3.0.12",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  }
+}
